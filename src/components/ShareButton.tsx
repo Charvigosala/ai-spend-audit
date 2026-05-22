@@ -17,7 +17,7 @@ export default function ShareButton({ auditId }: { auditId: string }) {
       onClick={handleCopy}
       className="w-full border border-gray-700 hover:border-gray-500 rounded-2xl py-3 text-gray-400 hover:text-white transition text-sm"
     >
-      {copied ? "✓ Link copied!" : "🔗 Copy shareable link"}
+      {copied ? "✓ Link copied!" : "🔗 shareable link"}
     </button>
   );
 }
