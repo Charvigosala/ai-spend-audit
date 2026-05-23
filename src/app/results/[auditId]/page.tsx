@@ -5,18 +5,17 @@ import { AuditResult } from "@/types";
 export async function generateMetadata({
   params,
 }: {
-  params: { auditId: string };
+  params: Promise<{ auditId: string }>;
 }) {
   try {
-    const data = await getAudit(params.auditId);
-    const audit: AuditResult = data.audit_data;
+    const { auditId } = await params;
+    const data = await getAudit(auditId);
     return {
       title: `AI Spend Audit — Save $${data.total_monthly_savings}/month`,
       description: `This team could save $${data.total_annual_savings}/year on AI tools.`,
       openGraph: {
         title: `AI Spend Audit — Save $${data.total_monthly_savings}/month`,
         description: `This team could save $${data.total_annual_savings}/year on AI tools.`,
-        type: "website",
       },
       twitter: {
         card: "summary",
@@ -32,11 +31,13 @@ export async function generateMetadata({
 export default async function ResultsPage({
   params,
 }: {
-  params: { auditId: string };
+  params: Promise<{ auditId: string }>;
 }) {
+  const { auditId } = await params;
+
   let data;
   try {
-    data = await getAudit(params.auditId);
+    data = await getAudit(auditId);
   } catch {
     notFound();
   }
@@ -47,8 +48,10 @@ export default async function ResultsPage({
     <main className="min-h-screen bg-gray-950 text-white">
       <div className="max-w-2xl mx-auto px-4 py-16">
         <div className="mb-8 text-center">
-          <p className="text-gray-400 text-sm mb-2">AI Spend Audit Report</p>
-          <h1 className="text-3xl font-bold">Shared Audit Results</h1>
+          <p className="text-gray-400 text-sm mb-2">
+            AI Spend Audit — Shared Report
+          </p>
+          <h1 className="text-3xl font-bold">Audit Results</h1>
         </div>
 
         <div
@@ -93,7 +96,7 @@ export default async function ResultsPage({
               key={rec.toolId}
               className="bg-gray-900 rounded-2xl p-5 border border-gray-800"
             >
-              <div className="flex justify-between items-start mb-3">
+              <div className="flex justify-between items-start mb-2">
                 <div>
                   <p className="font-semibold">{rec.toolName}</p>
                   <p className="text-sm text-gray-400">
@@ -120,7 +123,6 @@ export default async function ResultsPage({
           <p className="text-gray-400 text-sm mb-4">
             Free. No account needed. Results in seconds.
           </p>
-
           <a
             href="/"
             className="inline-block bg-emerald-500 hover:bg-emerald-400 text-white font-semibold px-6 py-2 rounded-lg transition"
