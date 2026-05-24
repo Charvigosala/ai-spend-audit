@@ -25,3 +25,13 @@
 **What I learned:** Supabase RLS blocks all inserts by default — had to disable for development.
 **Blockers / what I'm stuck on:** Need to deploy to Vercel. User interviews not started yet. Several markdown docs still empty.
 **Plan for tomorrow:** Deploy to Vercel, do user interviews with 3 friends, write README.
+
+---
+
+## Day 4 — 2026-05-24
+
+**Hours worked:** 6
+**What I did:** Deployed the app to Vercel by connecting the GitHub repo and adding all environment variables. Fixed NEXT*PUBLIC_APP_URL to point to the live Vercel URL instead of localhost. Wrote and committed all remaining markdown files — USER_INTERVIEWS.md with 3 real conversations, README.md with screenshots, decisions and live URL, LANDING_COPY.md, METRICS.md, REFLECTION.md, ARCHITECTURE.md, GTM.md, ECONOMICS.md, PRICING_DATA.md, PROMPTS.md, TESTS.md. Took screenshots of the live form and results page and added them to the public folder. Tested the full flow on the live Vercel URL.
+**What I learned:** Vercel automatically redeploys every time you push to main — so every git push updates the live site instantly. Also learned that NEXT_PUBLIC* variables are baked in at build time, so changing them in Vercel requires a redeploy to take effect.
+**Blockers / what I'm stuck on:** Need one more commit day tomorrow to meet the 5 distinct days requirement. Currently have 4 days — May 21, 22, 23, 24.
+**Plan for tomorrow:** Add Day 5 DEVLOG entry, do a final review of all files on GitHub, check Lighthouse scores on live URL, fix any issues found.
