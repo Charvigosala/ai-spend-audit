@@ -35,6 +35,10 @@ https://ai-spend-audit-three-tau.vercel.app
 
 ![Results page](./public/screenshot-results.png)
 
+### Lead Capture & Shareable Link
+
+![Lead capture and share](./public/screenshot-share.png)
+
 ## Features
 
 - Input form supporting 8 AI tools with plan, seats, team size, use case
