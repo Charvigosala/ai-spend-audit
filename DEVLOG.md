@@ -35,3 +35,13 @@
 **What I learned:** Vercel automatically redeploys every time you push to main — so every git push updates the live site instantly. Also learned that NEXT_PUBLIC* variables are baked in at build time, so changing them in Vercel requires a redeploy to take effect.
 **Blockers / what I'm stuck on:** Need one more commit day tomorrow to meet the 5 distinct days requirement. Currently have 4 days — May 21, 22, 23, 24.
 **Plan for tomorrow:** Add Day 5 DEVLOG entry, do a final review of all files on GitHub, check Lighthouse scores on live URL, fix any issues found.
+
+---
+
+## Day 5 — 2026-05-25
+
+**Hours worked:** 3
+**What I did:** Cleaned up GitHub repo by removing auto-generated files. Added repo description and live URL to About section. Did final review of all 12 markdown files on GitHub. Verified all files are correct and nothing is missing.
+**What I learned:** Always add auto-generated files to .gitignore from day one to keep the repo clean.
+**Blockers / what I'm stuck on:** Need to run Lighthouse scores before submission.
+**Plan for tomorrow:** Run Lighthouse, fix any issues, submit the Google Form.
