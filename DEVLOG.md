@@ -45,3 +45,11 @@
 **What I learned:** Always add auto-generated files to .gitignore from day one to keep the repo clean.
 **Blockers / what I'm stuck on:** Need to run Lighthouse scores before submission.
 **Plan for tomorrow:** Run Lighthouse, fix any issues, submit the Google Form.
+
+## Day 6 — 2026-05-26
+
+**Hours worked:**
+**What I did:** Ran Lighthouse audit on live Vercel URL. Fixed [any issues found]. Submitted the Google Form.
+**What I learned:**
+**Blockers / what I'm stuck on:** None — project submitted.
+**Plan for tomorrow:** N/A
