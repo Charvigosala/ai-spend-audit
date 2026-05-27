@@ -53,3 +53,8 @@
 **What I learned:**
 **Blockers / what I'm stuck on:** None — project submitted.
 **Plan for tomorrow:** N/A
+
+git add DEVLOG.md .gitignore
+git rm --cached tsconfig.tsbuildinfo
+git commit -m "docs: add Day 7 DEVLOG entry, clean up gitignore"
+git push origin main
